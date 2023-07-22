@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Air Pollution Monitoring System</title>
+</head>
+<body>
+	<h1>Air Pollution Monitoring Data</h1>
+	<form action="{{url_for('insert')}}" method="POST">
+		<label for="id">ID:</label>
+		<input type="text" id="id" name="id"><br>
+
+		<label for="date_time">Date and Time:</label>
+		<input type="datetime-local" id="date_time" name="date_time"><br>
+
+		<label for="location">Location:</label>
+		<input type="text" id="location" name="location"><br>
+
+		<label for="temperature">Temperature:</label>
+		<input type="number" id="temperature" name="temperature"><br>
+
+		<label for="relative_humidity">Relative Humidity:</label>
+		<input type="number" id="relative_humidity" name="relative_humidity"><br>
+
+		<label for="atmospheric_pressure">Atmospheric Pressure:</label>
+		<input type="number" id="atmospheric_pressure" name="atmospheric_pressure"><br>
+
+		<label for="altitude">Altitude:</label>
+		<input type="number" id="altitude" name="altitude"><br>
+
+		<label for="co_concentration">CO Concentration:</label>
+		<input type="number" id="co_concentration" name="co_concentration"><br>
+
+		<label for="ch4_concentration">CH4 Concentration:</label>
+		<input type="number" id="ch4_concentration" name="ch4_concentration"><br>
+
+		<label for="smoke_concentration">Smoke Concentration:</label>
+		<input type="number" id="smoke_concentration" name="smoke_concentration"><br>
+
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>

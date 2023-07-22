@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Air Pollution Monitoring System</title>
+</head>
+<body>
+    <h1>Data for ID {{ data[0] }}</h1>
+    <table>
+        <tr>
+            <td>Date/Time</td>
+            <td>{{ data[1] }}</td>
+        </tr>
+        <tr>
+            <td>Location</td>
+            <td>{{ data[2] }}</td>
+        </tr>
+        <tr>
+            <td>Temperature</td>
+            <td>{{ data[3] }}</td>
+        </tr>
+        <tr>
+            <td>Relative Humidity</td>
+            <td>{{ data[4] }}</td>
+        </tr>
+        <tr>
+            <td>Atmospheric Pressure</td>
+            <td>{{ data[5] }}</td>
+        </tr>
+        <tr>
+            <td>Altitude</td>
+            <td>{{ data[6] }}</td>
+        </tr>
+        <tr>
+            <td>CO Concentration</td>
+            <td>{{ data[7] }}</td>
+        </tr>
+        <tr>
+            <td>CH4 Concentration</td>
+            <td>{{ data[8] }}</td>
+        </tr>
+        <tr>
+            <td>Smoke Concentration</td>
+            <td>{{ data[9] }}</td>
+        </tr>
+    </table>
+    <a href="{{ url_for('Index') }}">Back to Index</a>
+    <a href="{{ url_for('edit', id=data[0]) }}">Edit</a>
+    <form method="POST" action="{{ url_for('delete', id=data[0]) }}">
+        <input type="submit" value="Delete">
+    </form>
+</body>
+</html>

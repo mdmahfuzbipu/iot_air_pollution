@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Data</title>
+</head>
+<body>
+    <h1>Edit Data for ID {{ data[0] }}</h1>
+    <form method="POST" action="{{ url_for('edit', id=data[0]) }}">
+        <label for="date_time">Date/Time:</label>
+        <input type="text" name="date_time" id="date_time" value="{{ data[1] }}"><br>
+
+        <label for="location">Location:</label>
+        <input type="text" name="location" id="location" value="{{ data[2] }}"><br>
+
+        <label for="temperature">Temperature:</label>
+        <input type="text" name="temperature" id="temperature" value="{{ data[3] }}"><br>
+
+        <label for="relative_humidity">Relative Humidity:</label>
+        <input type="text" name="relative_humidity" id="relative_humidity" value="{{ data[4] }}"><br>
+
+        <label for="atmospheric_pressure">Atmospheric Pressure:</label>
+        <input type="text" name="atmospheric_pressure" id="atmospheric_pressure" value="{{ data[5] }}"><br>
+
+        <label for="altitude">Altitude:</label>
+        <input type="text" name="altitude" id="altitude" value="{{ data[6] }}"><br>
+
+        <label for="co_concentration">CO Concentration:</label>
+        <input type="text" name="co_concentration" id="co_concentration" value="{{ data[7] }}"><br>
+
+        <label for="ch4_concentration">CH4 Concentration:</label>
+        <input type="text" name="ch4_concentration" id="ch4_concentration" value="{{ data[8] }}"><br>
+
+        <label for="smoke_concentration">Smoke Concentration:</label>
+        <input type="text" name="smoke_concentration" id="smoke_concentration" value="{{ data[9] }}"><br>
+
+        <input type="submit" value="Update">
+    </form>
+    <a href="{{ url_for('Index') }}">Back to Index</a>
+</body>
+</html>
